@@ -5,6 +5,6 @@ services:
             - '1883:1883'
             - '9001:9001'
         volumes:
-            - '/home/jadon/mosquitto/config:/mosquitto/config'
-            - '/home/jadon/mosquitto/data:/mosquitto/data'
+            - '<DIRECTORY WHERE YOU WANT YOUR MQTT PERSISTED>/config:/mosquitto/config'
+            - '<DIRECTORY WHERE YOU WANT YOUR MQTT PERSISTED>/data:/mosquitto/data'
         image: eclipse-mosquitto
