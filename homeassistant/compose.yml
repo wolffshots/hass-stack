@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  homeassistant:
+    container_name: homeassistant
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    volumes:
+      - <DIRECTORY WHERE YOU WANT YOUR CONFIG>/config:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
+#    devices:
+#      - /dev/ttyUSB0:/dev/ttyUSB0
+#    environment:
+#      - DISABLE_JEMALLOC: true

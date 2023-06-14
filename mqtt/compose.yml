@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+    eclipse-mosquitto:
+        ports:
+            - '1883:1883'
+            - '9001:9001'
+        volumes:
+            - '/home/jadon/mosquitto/config:/mosquitto/config'
+            - '/home/jadon/mosquitto/data:/mosquitto/data'
+        image: eclipse-mosquitto
